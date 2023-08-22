@@ -1,0 +1,151 @@
+.modals-fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.lock {
+    overflow: hidden;
+}
+
+
+.modal {
+
+    &__window {
+        position: relative;
+        background-color: #fff;
+        border-radius: 10px;
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 25px;
+        z-index: 50;
+        cursor: auto;
+    }
+
+    &__window-inner {
+        position: relative;
+    }
+
+    &__window-close {
+        position: absolute;
+        top: -3px;
+        right: -3px;
+        width: 40px;
+        cursor: pointer;
+        transition: transform .3s;
+        &:hover {
+            transform: rotate(45deg);
+        }
+    }
+
+    &__title {
+        font-size: 32px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-align: justify;
+    }
+
+    &__btn {
+        display: inline-block;
+        padding: 10px 15px;
+        font-size: 21px;
+        text-decoration: none;
+        width: 150px;
+        text-align: center;
+        border-radius: var(--border-radius);
+        background-color: var(--accent-color);
+        color: var(--color-white);
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover {
+            background-color: var(--accent-color-dark);
+        }
+    }
+
+    &__image-modal {
+        height: unset;
+    }
+}
+
+@media screen and (max-width: 845px) {
+    .modal {
+    
+            &__window {
+                margin: 30px 15px;
+            }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .modal {
+            &__window {
+                margin: 20px 15px;
+            }
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .modal {
+    
+        &__window {
+            padding: 15px;
+            margin: 10px 10px 100px 10px;
+        }
+
+        &__title {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        &__btn {
+            display: block;
+            width: unset;
+            margin: 15px 0;
+                
+        }
+
+        &__window-close {
+            width: 38px;
+            right: -7px;
+            top: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .modal {
+    
+        &__window {
+            padding: 15px;
+        }
+
+        &__title {
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+    }
+}
