@@ -263,6 +263,10 @@ body {
   .header__menu-item.drop {
     align-items: start;
   }
+  .header {
+    border-bottom: none;
+    box-shadow: none;
+  }
   .header__dropdown-content {
     position: static;
     margin-top: 10px;

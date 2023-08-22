@@ -214,6 +214,9 @@
         }
     }
     .header {
+        border-bottom: none;
+        box-shadow: none;
+        
         &__dropdown-content {
             position: static;
             margin-top: 10px;
